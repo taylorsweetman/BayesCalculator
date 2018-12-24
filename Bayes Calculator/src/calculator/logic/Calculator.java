@@ -8,8 +8,8 @@ public class Calculator {
 
 	private Event a;
 	private Event b;
-	private ConditionalEvent aGivenB;
-	private ConditionalEvent bGivenA;
+	private Event aGivenB;
+	private Event bGivenA;
 	private List<Event> initializedEvents;
 
 	public Calculator() {
@@ -78,12 +78,12 @@ public class Calculator {
 		initializedEvents.add(event);
 	}
 
-	public void setAgivenB(ConditionalEvent ce) {
+	public void setAgivenB(Event ce) {
 		this.aGivenB = ce;
 		initializedEvents.add(ce);
 	}
 
-	public void setBgivenA(ConditionalEvent ce) {
+	public void setBgivenA(Event ce) {
 		this.bGivenA = ce;
 		initializedEvents.add(ce);
 	}
